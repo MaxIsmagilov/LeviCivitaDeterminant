@@ -1,1 +1,2 @@
-Determinant([0, -5, -2, -2, 2, 4; -2, 0, -3, -1, 2, 1; 3, 3, 5, -4, 1, 2; 2, 3, -4, 0, 4, 3; 4, -1, -2, -5, -2, 0; -5, -3, -2, 3, -4, -2])
+determinant_test = Determinant([0, -5, -2, -2, 2, 4; -2, 0, -3, -1, 2, 1; 3, 3, 5, -4, 1, 2; 2, 3, -4, 0, 4, 3; 4, -1, -2, -5, -2, 0; -5, -3, -2, 3, -4, -2]);
+printf("the determinant calculated is %d (should be -14357)\n", determinant_test)

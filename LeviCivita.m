@@ -5,6 +5,7 @@ function l = LeviCivita(arr)
     newarr = arr;
     l = 0;
     swaps = 0;
+
     % sort the list, counting swaps (insertion sort)
     ind_i = 2;
     while (ind_i <= size(newarr)(2))
@@ -18,6 +19,7 @@ function l = LeviCivita(arr)
         end
         ind_i++;
     end
+
     % check if any numbers match
     matching_exist = false;
     for i = 2:size(newarr)(2)
@@ -26,6 +28,7 @@ function l = LeviCivita(arr)
         end
     end
 
+    % if matching exist, just return zero, otherwise return based on the number of swaps
     if (!matching_exist)
         if (mod(swaps, 2) == 0)
             l = 1;
@@ -33,5 +36,4 @@ function l = LeviCivita(arr)
             l = -1;
         end
     end
-    
 end

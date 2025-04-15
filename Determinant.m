@@ -1,5 +1,6 @@
 % Calculates the determinant of a SQUARE matrix
-% This may take a long time for larger matrices because of the large number of permutations
+% This may take a long time for larger matrices because of the large number of permutations.
+% For example, a 6x6 can take upwards of seconds on some devices.
 % It is possible to speed this up by instantly not considering any calculations with repeat indeces,
 % just using permutations, but this would defeat the purpose of using Levi-Civita. 
 function d = Determinant(A)
