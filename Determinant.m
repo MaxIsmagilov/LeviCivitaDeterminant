@@ -10,22 +10,24 @@ function d = Determinant(A)
         n = size(A)(2)
         arr = ones(1, n);
         while (true)
+            arr
+            n
             l = LeviCivita(arr);
             if (l != 0) 
                 prodd = 1;
                 for i = 1:n
                     prodd *= A(i, arr(1,i));
                 end
-                d += prodd;
+                d += l * prodd;
             end
 
             carry = 1;
             for j = 1:n
-                if (arr(1,n) == n && carry == 1)
-                    arr(1,n) = 1;
+                if (arr(1,j) == n && carry == 1)
+                    arr(1,j) = 1;
                     carry = 1;
                 else 
-                    arr(1,n) += carry;
+                    arr(1,j) += carry;
                     carry = 0;
                 end
             end
